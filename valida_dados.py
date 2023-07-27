@@ -68,11 +68,8 @@ for i in range(len(colunas_observado)):
 RMSE = pd.DataFrame(rmse).transpose()    
 
 #Termina de configurar o dataframe e cria a planilha final
-estatisticas = pd.concat([correlacoes, vies, RMSE])
-estatisticas.reset_index(drop=True, inplace=True)
-estatisticas.drop(index=[2,4], inplace = True)
-estatisticas.reset_index(drop=True, inplace=True)
+estatisticas = pd.concat([correlacoes, vies, RMSE]).reset_index(drop=True).drop(index=[2, 4]).reset_index(drop=True)
 estatisticas.index = ['id_da_rodada', 'Correlação (r)', 'Bias', 'RMSE']
 estatisticas.columns = estatisticas.iloc[0]
-estatisticas = estatisticas[1:]
-estatisticas.to_csv('caminho_para_planilha_final.csv', sep=' ')
+estatisticas = estatisticas.iloc[1:]
+estatisticas.to_csv('caminho_da_planilha_final.csv', sep=' ', index=False)

@@ -1,2 +1,2 @@
-# Análise_de_dados_wrf
-Análise de dados meteorológicos de rodadas do modelo WRF
+# WRF Data Analisys
+I've created this repository to store and showcase the scripts I worked on during my time as a research intern at LMQA. WRF is a complex numerical weather prediction system. My work at the lab involves acquiring meteorological data from global models, usually via API; planning and defining parameter sets for running WRF; extracting the necessary output data from the model; and processing it, usually by performing sensitivity analyses using various statistical methods.
